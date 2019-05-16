@@ -41,12 +41,23 @@
                   <th>url</th>
                   <th>created_at</th>
                   <th>author</th>
+                  <th>Points</th>
+                  <th>relevancy_score</th>
+                  <th>tags</th>
                 </tr>
                 <tr>
                   <td>{{currentData.title}}</td>
                   <td>{{currentData.url}}</td>
                   <td>{{currentData.created_at}}</td>
                   <td>{{currentData.author}}</td>
+                  <td>{{currentData.points}}</td>
+                  <td>{{currentData.relevancy_score}}</td>
+                  <td>
+                    <p *ngFor="let item of currentData?._tags;">
+                      {{item}}
+                    </p>
+                  </td>
+                  
                 </tr>
         </table>
       </div>
